@@ -1,0 +1,27 @@
+.offers {
+
+  &-filter {
+
+    .btn {
+      height: 48px  ;
+    }
+
+    &__dropdowns {
+      display: flex;
+      column-gap: 20px;
+
+      .dropdown {
+        width: 100%;
+
+        &-toggle {
+          min-width: 100%;
+          max-width: 250px;
+        }
+      }
+    }
+
+    &__info {
+
+    }
+  }
+}

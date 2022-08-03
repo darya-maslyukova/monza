@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+
+@font-face {
+  font-family: 'Noto Sans';
+  src: url('../fonts/NotoSans-Bold.eot');
+  src: url('../fonts/NotoSans-Bold.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/NotoSans-Bold.woff2') format('woff2'),
+  url('../fonts/NotoSans-Bold.woff') format('woff'),
+  url('../fonts/NotoSans-Bold.ttf')  format('truetype'),
+  url('../fonts/NotoSans-Bold.svg#Noto Sans') format('svg');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Noto Sans';
+  src: url('../fonts/NotoSans-SemiBold.eot');
+  src: url('../fonts/NotoSans-SemiBold.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/NotoSans-SemiBold.woff2') format('woff2'),
+  url('../fonts/NotoSans-SemiBold.woff') format('woff'),
+  url('../fonts/NotoSans-SemiBold.ttf')  format('truetype'),
+  url('../fonts/NotoSans-SemiBold.svg#Noto Sans SemiBold') format('svg');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Noto Sans';
+  src: url('../fonts/NotoSans-Regular.eot');
+  src: url('../fonts/NotoSans-Regular.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/NotoSans-Regular.woff2') format('woff2'),
+  url('../fonts/NotoSans-Regular.woff') format('woff'),
+  url('../fonts/NotoSans-Regular.ttf')  format('truetype'),
+  url('../fonts/NotoSans-Regular.svg#Noto Sans') format('svg');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Noto Sans';
+  src: url('../fonts/NotoSans-Thin.eot');
+  src: url('../fonts/NotoSans-Thin.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/NotoSans-Thin.woff2') format('woff2'),
+  url('../fonts/NotoSans-Thin.woff') format('woff'),
+  url('../fonts/NotoSans-Thin.ttf')  format('truetype'),
+  url('../fonts/NotoSans-Thin.svg#Noto Sans Thin') format('svg');
+  font-weight: 300;
+  font-style: normal;
+}

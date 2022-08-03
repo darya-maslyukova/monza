@@ -1,0 +1,16 @@
+@use "sass:math";
+@import "node_modules/bootstrap/scss/bootstrap.scss";
+
+
+@import "reset";
+@import "variables";
+@import "fonts";
+@import "base";
+@import "header";
+@import "main";
+@import "footer";
+@import "animation";
+
+@import "components/top-banner";
+
+@import "pages/offers";

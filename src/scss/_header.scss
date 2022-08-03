@@ -1,0 +1,36 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 19px 0;
+
+  &--fixed {
+    background: transparentize($black, 0.6);
+    backdrop-filter: blur(6px);
+  }
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &-nav {
+
+    & > a,
+    &__link {
+      color: $alabaster;
+      font-weight: 500;
+      font-size: 15px;
+      margin-left: 40px;
+
+      &:last-child {
+        margin-left: 27px;
+      }
+
+      &:first-child {
+        margin-left: 0;
+      }
+    }
+  }
+}

@@ -1,0 +1,209 @@
+//----- Icons
+
+.icon {
+  display: inline-block;
+  vertical-align: middle;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+
+  &--fb {
+    background-image: url("../images/icons/fb.svg");
+    width: 18px;
+    height: 18px;
+  }
+
+  &--inst{
+    background-image: url("../images/icons/inst.svg");
+    width: 18px;
+    height: 18px;
+  }
+}
+
+//----- Buttons
+
+.btn {
+  text-align: center;
+  height: 56px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px 20px;
+  transition: 200ms ease-in-out;
+  border-radius: 15px;
+  font-weight: 500;
+  font-size: 20px;
+
+  &--full-width {
+    width: 100%;
+  }
+
+  &--info {
+    color: $alabaster;
+    font-weight: 400;
+    background: $punch;
+    cursor: initial;
+    font-size: 15px;
+
+    &:hover {
+      background: $punch;
+      color: $alabaster;
+      border: 0;
+    }
+  }
+
+  &--transp {
+    border: 2px solid $alabaster;
+    color: $alabaster;
+    min-width: 240px;
+
+    &:disabled {
+      border: 2px solid $dove-gray;
+      color: $dove-gray;
+    }
+
+    &:hover {
+      background: $alabaster;
+      color: $black;
+      border-color: $alabaster;
+    }
+  }
+
+  &:focus {
+    outline: none;
+    box-shadow: none;
+  }
+}
+
+//------- Inputs
+
+input[type="text"],
+input[type="phone"],
+input[type="search"],
+select,
+.btn--select {
+  height: 48px;
+  font-weight: 400;
+  font-size: 15px;
+  color: $black;
+  margin-bottom: 30px;
+  border-radius: 15px;
+  padding: 0 16px;
+  border: 1px solid $silver-select;
+  background: $white;
+
+  &::placeholder {
+    font-weight: 300;
+    font-size: 20px;
+    color: rgba(4, 4, 14, 50%);
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
+
+select {
+  padding-right: 50px;
+  appearance: none; /*Chrome, Safari и Opera*/
+  -webkit-appearance: none; /*Chrome, Safari и Opera*/
+  -moz-appearance: none; /*Firefox*/
+  text-indent: 0.01px; /*Firefox*/
+  text-overflow: ''; /*Firefox*/
+  background: #fff url('../images/icons/select.svg') no-repeat 95% 20px;
+  background: #fff url('../images/icons/select.svg') no-repeat calc(100% - 14px) 20px;
+  background: #fff url('../images/icons/select.svg') no-repeat -moz-calc(100% - 14px) 20px;
+  background: #fff url('../images/icons/select.svg') no-repeat -webkit-calc(100% - 14px) 20px;
+  background-size: 14px;
+  outline: none;
+
+  &::-ms-expand {
+    display: none;
+  }
+}
+
+//-------- Dropdown
+
+.dropdown {
+  display: inline-flex;
+  margin-bottom: 0;
+  border: 1px solid $silver;
+  border-radius: 15px;
+  background-color: $white;
+  box-shadow: none;
+
+  &--open {
+    box-shadow: 0 0 27px rgba(0, 0, 0, 0.04);
+
+    .btn {
+      font-weight: 600;
+    }
+  }
+
+  &--selected {
+    border: 1px solid $punch;
+
+    &.dropdown--open {
+      border: 1px solid $silver;
+    }
+  }
+
+  &-toggle {
+    position: relative;
+    min-width: 170px;
+    justify-content: flex-start;
+    border: 0;
+    border-radius: 15px;
+    margin-bottom: 0;
+
+    &:after {
+      display: none;
+    }
+  }
+
+  .caret {
+    background: url("../images/icons/select.svg") no-repeat center;
+    width: 14px;
+    height: 8px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    right: 14px;
+  }
+
+  &-menu {
+    background: $white;
+    border: 1px solid $silver;
+    padding: 7px 16px;
+    width: calc(100% + 2px);
+    border-radius: 0 0 15px 15px;
+    left: -1px !important;
+    max-height: 200px;
+    overflow: scroll;
+
+    &[data-popper-placement="bottom-start"] {
+      border-top: 0;
+      top: -14px !important;
+    }
+
+    &[data-popper-placement="top-start"] {
+      bottom: -14px !important;
+      left: -1px !important;
+      border-radius: 15px 15px 0 0;
+      border-bottom: 0;
+    }
+
+    &__item {
+      font-weight: 400;
+      font-size: 13px;
+      line-height: 12px;
+      padding: 10px 0;
+      cursor: pointer;
+
+      &--active {
+        color: $punch;
+      }
+    }
+  }
+}
