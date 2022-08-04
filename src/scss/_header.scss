@@ -4,18 +4,40 @@
   left: 0;
   width: 100%;
   padding: 19px 0;
+  z-index: 1;
+  transition: 300ms ease-out;
 
   &--fixed {
-    background: transparentize($black, 0.6);
+    background: transparentize($black, 0.3);
     backdrop-filter: blur(6px);
   }
 
   .container {
     display: flex;
     justify-content: space-between;
+    align-items: center;
   }
 
   &-nav {
+
+    @include media-breakpoint-down(md) {
+      display: none;
+      position: fixed;
+      left: 0;
+      top: 0;
+      flex-direction: column;
+      background: transparentize($black, 0.3);
+      backdrop-filter: blur(6px);
+      width: 100%;
+      height: 100vh;
+      align-items: center;
+      padding: 100px 20px 40px;
+      row-gap: 30px;
+
+      &--mobile {
+        display: flex;
+      }
+    }
 
     & > a,
     &__link {
@@ -24,12 +46,102 @@
       font-size: 15px;
       margin-left: 40px;
 
+      @include media-breakpoint-down(md) {
+        margin-left: 0;
+      }
+
+      &:hover {
+        color: $white;
+      }
+
       &:last-child {
         margin-left: 27px;
+
+        @include media-breakpoint-down(md) {
+          margin-left: 0;
+        }
       }
 
       &:first-child {
         margin-left: 0;
+      }
+    }
+  }
+}
+
+//--------------------------------MOBILE MENU
+.menu-toggle {
+  position: relative;
+  z-index: 1;
+  width: 34px;
+  height: 24px;
+  display: none;
+
+  @include media-breakpoint-down(md) {
+    display: block;
+  }
+
+  &__btn {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform: rotate(0deg);
+    transition: 0.5s ease-in-out;
+    cursor: pointer;
+    border: 0;
+    padding: 0;
+    background: transparent;
+    box-shadow: none;
+
+    &:focus {
+      outline: 0;
+    }
+
+    span {
+      display: block;
+      position: absolute;
+      height: 2px;
+      border-radius: 1px;
+      width: 100%;
+      opacity: 1;
+      left: 0;
+      background: $white;
+      transform: rotate(0deg);
+      transition: 0.3s ease-in-out;
+
+      &:nth-child(1) {
+        top: 0;
+      }
+
+      &:nth-child(2) {
+        top: 10px;
+      }
+
+      &:nth-child(3) {
+        top: 20px;
+      }
+    }
+
+    &.opened {
+
+      span {
+        height: 2px;
+
+        &:nth-child(1) {
+          top: 12px;
+          width: 0;
+          left: 50%;
+        }
+
+        &:nth-child(2) {
+          top: 7px;
+          transform: rotate(45deg);
+        }
+
+        &:nth-child(3) {
+          top: 7px;
+          transform: rotate(-45deg);
+        }
       }
     }
   }

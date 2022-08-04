@@ -21,6 +21,11 @@ html(lang="en")
                             i.icon.icon--fb
                         a(href="#").header-nav__link
                             i.icon.icon--inst
+                    .menu-toggle
+                        button.menu-toggle__btn
+                            span
+                            span
+                            span
             // End Header
 
             // Top Banner
@@ -40,7 +45,7 @@ html(lang="en")
                 .offers.container
                     h2.text-center Current Offers
                     .offers-filter.row
-                        .col-9.offers-filter__dropdowns
+                        .col-12.col-lg-9.offers-filter__dropdowns
                             .dropdown
                                 button.btn.btn--select.dropdown-toggle(type='button', data-bs-toggle='dropdown')
                                     | Year
@@ -89,23 +94,199 @@ html(lang="en")
                                     li.dropdown-menu__item Mileage 1
                                     li.dropdown-menu__item Mileage 2
                                     li.dropdown-menu__item Mileage 3
-                        .col-3.offers-filter__info
+                        .col-12.col-lg-3.offers-filter__info
                             .btn.btn--info.btn--full-width 40 cars
                     .offers-sort
+                        .check-group
+                            input(type="checkbox" value="Instantly available vehicles" id="check_available")
+                            label(for="check_available") Instantly available vehicles
+                        .sort-by
+                            .sort-by__label Sort by
+                            .sort-by__dropdown
+                                .dropdown.dropdown--sort-by
+                                    button.btn.btn--no-styles.dropdown-toggle(type='button', data-bs-toggle='dropdown')
+                                        | Publication date (ascending)
+                                        span.caret.caret--asc
+                                    ul.dropdown-menu
+                                        //li.dropdown-menu__item.dropdown-menu__item--no-selected Publication date (ascending)
+                                        li.dropdown-menu__item Publication date (ascending)
+                                        li.dropdown-menu__item Price (ascending)
+                                        li.dropdown-menu__item Price (descending)
+                                        li.dropdown-menu__item Mileage (ascending)
+                                        li.dropdown-menu__item Mileage (descending)
+                                        li.dropdown-menu__item Performance (ascending)
+                                        li.dropdown-menu__item Performance (descending)
+
+
                     .offers-grid.row
-                        col-4
-                        col-4
-                        col-4
-                        col-4
+                        .col-lg-3.col-sm-6.col-12
+                            .card.card--new
+                                .card-image
+                                    img(src="pictures/auto-1.png", alt="Auto")
+                                .card-info
+                                    .card-info__title
+                                        .card-info__year 2019
+                                        a(href="#") Volkswagen Tiguan
+                                    .card-info__points 19,855 km | Automatic | Diesel
+                                    .card-info__price $34,888
+                        .col-lg-3.col-sm-6.col-12
+                            .card.card--sold
+                                .card-image
+                                    img(src="pictures/auto-2.png", alt="Auto")
+                                .card-info
+                                    .card-info__title
+                                        .card-info__year 2019
+                                        a(href="#") Toyota Highlander XLE
+                                    .card-info__points 69,000 km | Automatic | Diesel
+                                    .card-info__price $27,875
+                        .col-lg-3.col-sm-6.col-12
+                            .card
+                                .card-image
+                                    img(src="pictures/auto-3.png", alt="Auto")
+                                .card-info
+                                    .card-info__title
+                                        .card-info__year 2019
+                                        a(href="#") Lexus RX 350 LUXURY
+                                    .card-info__points 69,000 km | Automatic | Diesel
+                                    .card-info__price $38,775
+                        .col-lg-3.col-sm-6.col-12
+                            .card
+                                .card-image
+                                    img(src="pictures/auto-4.png", alt="Auto")
+                                .card-info
+                                    .card-info__title
+                                        .card-info__year 2019
+                                        a(href="#") Toyota Highlander LE Automatic
+                                    .card-info__points 69,000 km | Automatic | Diesel
+                                    .card-info__price $23,728
+                        .col-lg-3.col-sm-6.col-12
+                            .card.card--new
+                                .card-image
+                                    img(src="pictures/auto-1.png", alt="Auto")
+                                .card-info
+                                    .card-info__title
+                                        .card-info__year 2019
+                                        a(href="#") Volkswagen Tiguan
+                                    .card-info__points 19,855 km | Automatic | Diesel
+                                    .card-info__price $34,888
+                        .col-lg-3.col-sm-6.col-12
+                            .card.card--sold
+                                .card-image
+                                    img(src="pictures/auto-2.png", alt="Auto")
+                                .card-info
+                                    .card-info__title
+                                        .card-info__year 2019
+                                        a(href="#") Toyota Highlander XLE
+                                    .card-info__points 69,000 km | Automatic | Diesel
+                                    .card-info__price $27,875
+                        .col-lg-3.col-sm-6.col-12
+                            .card
+                                .card-image
+                                    img(src="pictures/auto-3.png", alt="Auto")
+                                .card-info
+                                    .card-info__title
+                                        .card-info__year 2019
+                                        a(href="#") Lexus RX 350 LUXURY
+                                    .card-info__points 69,000 km | Automatic | Diesel
+                                    .card-info__price $38,775
+                        .col-lg-3.col-sm-6.col-12
+                            .card
+                                .card-image
+                                    img(src="pictures/auto-4.png", alt="Auto")
+                                .card-info
+                                    .card-info__title
+                                        .card-info__year 2019
+                                        a(href="#") Toyota Highlander LE Automatic
+                                    .card-info__points 69,000 km | Automatic | Diesel
+                                    .card-info__price $23,728
+                        .col-lg-3.col-sm-6.col-12
+                            .card
+                                .card-image
+                                    img(src="pictures/auto-3.png", alt="Auto")
+                                .card-info
+                                    .card-info__title
+                                        .card-info__year 2019
+                                        a(href="#") Lexus RX 350 LUXURY
+                                    .card-info__points 69,000 km | Automatic | Diesel
+                                    .card-info__price $38,775
+                        .col-lg-3.col-sm-6.col-12
+                            .card
+                                .card-image
+                                    img(src="pictures/auto-4.png", alt="Auto")
+                                .card-info
+                                    .card-info__title
+                                        .card-info__year 2019
+                                        a(href="#") Toyota Highlander LE Automatic
+                                    .card-info__points 69,000 km | Automatic | Diesel
+                                    .card-info__price $23,728
 
+                .subscribe
+                    .container
+                        .subscribe__text
+                            h4 Haven't found a suitable vehicle?
+                            p Sign up for our newsletter and be the first to know when we publish new vehicle offers.
+                        form(method='post', name="subscribeForm" action='').subscribe__form
+                                label.form-label
+                                    input(type='email' placeholder='Enter your email' name='subEmail' pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required)#subscribeEmail
+                                    .form-label__message.form-label__message--error Incorrect email
+                                    .form-label__icon
+                                button(type='submit').btn.btn--bg Subscribe now
 
+                .container
+                    h2.text-center Popular questions
+                    #accordionFaq.accordion
+                        .accordion-item
+                            #headingOne.accordion-item__header.collapsed(data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne")
+                                | 1. Scope
+                            #collapseOne(data-parent="#accordionFaq" aria-labelledby="headingOne").collapse
+                                .accordion-item__body
+                                    p 1.1 The statutory warranty is completely excluded to the extent permitted by law.
+                                    p 1.2 If the vehicle still has a current factory warranty, a sales representative (brand representative) of the manufacturer shall provide the services owed therein. If there is a factory warranty, the beginning of the warranty for new vehicles or vehicles with a current manufacturer's warranty is not the date of the first placing on the market, but the beginning of the warranty in the manufacturer's system or the contractually agreed beginning of the warranty, if any.
+                                    p 1.3 If there is a special warranty insurance for the vehicle, this will take the place of the material warranty according to section 3.1 and replace it. In this case, the General Terms and Conditions of the respective warranty service provider apply.
+
+                        .accordion-item
+                            .accordion-item__header.collapsed(data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo")
+                                | 2. Vehicle characteristics
+                            #collapseTwo(data-parent="#accordionFaq" aria-labelledby="headingTwo").collapse
+                                .accordion-item__body
+                                    p 2.1 The statutory warranty is completely excluded to the extent permitted by law.
+                                    p 2.2 If the vehicle still has a current factory warranty, a sales representative (brand representative) of the manufacturer shall provide the services owed therein. If there is a factory warranty, the beginning of the warranty for new vehicles or vehicles with a current manufacturer's warranty is not the date of the first placing on the market, but the beginning of the warranty in the manufacturer's system or the contractually agreed beginning of the warranty, if any.
+                                    p 2.3 If there is a special warranty insurance for the vehicle, this will take the place of the material warranty according to section 3.1 and replace it. In this case, the General Terms and Conditions of the respective warranty service provider apply.
+
+                        .accordion-item
+                            .accordion-item__header.collapsed(data-toggle="collapse" data-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree")
+                                | 3. Warranty / guarantee
+                            #collapseThree(data-parent="#accordionFaq" aria-labelledby="headingThree").collapse
+                                .accordion-item__body
+                                    p 3.1 The statutory warranty is completely excluded to the extent permitted by law.
+                                    p 3.2 If the vehicle still has a current factory warranty, a sales representative (brand representative) of the manufacturer shall provide the services owed therein. If there is a factory warranty, the beginning of the warranty for new vehicles or vehicles with a current manufacturer's warranty is not the date of the first placing on the market, but the beginning of the warranty in the manufacturer's system or the contractually agreed beginning of the warranty, if any.
+                                    p 3.3 If there is a special warranty insurance for the vehicle, this will take the place of the material warranty according to section 3.1 and replace it. In this case, the General Terms and Conditions of the respective warranty service provider apply.
+
+                        .accordion-item
+                            .accordion-item__header.collapsed(data-toggle="collapse" data-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour")
+                                | 4. Trade-in vehicle
+                            #collapseFour(data-parent="#accordionFaq" aria-labelledby="headingFour").collapse
+                                .accordion-item__body
+                                    p 4.1 The statutory warranty is completely excluded to the extent permitted by law.
+                                    p 4.2 If the vehicle still has a current factory warranty, a sales representative (brand representative) of the manufacturer shall provide the services owed therein. If there is a factory warranty, the beginning of the warranty for new vehicles or vehicles with a current manufacturer's warranty is not the date of the first placing on the market, but the beginning of the warranty in the manufacturer's system or the contractually agreed beginning of the warranty, if any.
 
         footer.footer
                 .container
+                    a(href="/").logo
+                        img(src="images/logo.svg", alt="Monza Motorsports")
+                    nav.footer-nav
+                        a(href="#").footer-nav__link Inventory
+                        a(href="#").footer-nav__link Financing
+                        a(href="#").footer-nav__link Contacts
+                    nav.footer-nav.footer-nav--socials
+                        a(href="#").footer-nav__link
+                            i.icon.icon--fb
+                        a(href="#").footer-nav__link
+                            i.icon.icon--inst
 
         block scripts
             script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js' integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer")
-            script(src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous")
             script(src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous")
+            script(src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous")
             script(src='js/main.min.js')
 

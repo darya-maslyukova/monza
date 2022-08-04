@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
 
 @font-face {
   font-family: 'Noto Sans';
@@ -21,6 +21,18 @@
   url('../fonts/NotoSans-SemiBold.ttf')  format('truetype'),
   url('../fonts/NotoSans-SemiBold.svg#Noto Sans SemiBold') format('svg');
   font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Noto Sans';
+  src: url('../fonts/NotoSans-Medium.eot');
+  src: url('../fonts/NotoSans-Medium.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/NotoSans-Medium.woff2') format('woff2'),
+  url('../fonts/NotoSans-Medium.woff') format('woff'),
+  url('../fonts/NotoSans-Medium.ttf')  format('truetype'),
+  url('../fonts/NotoSans-Medium.svg#Noto Sans Medium') format('svg');
+  font-weight: 500;
   font-style: normal;
 }
 

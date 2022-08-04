@@ -1,14 +1,21 @@
 .offers {
+  margin-bottom: 80px;
 
   &-filter {
 
     .btn {
-      height: 48px  ;
+      height: 48px;
     }
 
     &__dropdowns {
       display: flex;
       column-gap: 20px;
+
+      @include media-breakpoint-down(lg) {
+        flex-direction: column;
+        margin-bottom: 20px;
+        row-gap: 20px;
+      }
 
       .dropdown {
         width: 100%;
@@ -19,9 +26,18 @@
         }
       }
     }
+  }
 
-    &__info {
+  &-sort {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 24px 0;
 
+    @include media-breakpoint-down(md){
+      flex-direction: column;
+      row-gap: 20px;
+      align-items: flex-start;
     }
   }
 }

@@ -1,0 +1,52 @@
+.subscribe {
+  color: $alabaster;
+  background: $black;
+  box-shadow: 0 0 18px rgba(68, 68, 68, 0.09);
+  padding: 40px 0;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 20px;
+  margin-bottom: 100px;
+
+  @include media-breakpoint-down(md) {
+    margin-bottom: 60px;
+  }
+
+  .form-label {
+    width: 100%;
+  }
+
+  .container {
+    display: flex;
+    align-items: center;
+
+    @include media-breakpoint-down(lg) {
+      flex-direction: column;
+    }
+  }
+
+  &__form {
+    display: flex;
+    width: 100%;
+  }
+
+  h4 {
+    margin-bottom: 20px;
+  }
+
+  &__text {
+    padding-right: 20px;
+    width: 100%;
+    max-width: 525px;
+
+    @include media-breakpoint-down(lg) {
+      max-width: 100%;
+      padding-right: 0;
+      margin-bottom: 20px;
+    }
+  }
+
+  .btn {
+    margin-left: 20px;
+  }
+}

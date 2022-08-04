@@ -13,9 +13,9 @@
 # But not gulpfile.js, package.json everywhere in the project
 !gulpfile.js
 !package.json
-!.DS_Store
 
 # But ignore node packages everywhere inside the project
+.DS_Store
 node_modules/
 .idea/
 dist/mixins/

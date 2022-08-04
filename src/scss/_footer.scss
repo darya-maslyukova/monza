@@ -1,2 +1,42 @@
 .footer {
+  background: $black;
+  padding: 36px 0;
+
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @include media-breakpoint-down(md) {
+      flex-direction: column;
+      row-gap: 30px;
+    }
+
+  }
+
+  &-nav {
+    display: flex;
+    align-items: center;
+
+    &__link {
+      color: $alabaster;
+      font-weight: 600;
+      font-size: 15px;
+
+      &:hover {
+        color: $white;
+      }
+
+      & + .footer-nav__link {
+        margin-left: 40px;
+      }
+    }
+
+    &--socials {
+
+      .footer-nav__link + .footer-nav__link {
+        margin-left: 28px;
+      }
+    }
+  }
 }

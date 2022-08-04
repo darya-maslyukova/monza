@@ -1,0 +1,136 @@
+.card {
+  background: $white;
+  box-shadow: 0 0 18px rgba(68, 68, 68, 0.09);
+  border: 0;
+  border-radius: 0;
+  margin-bottom: 20px;
+
+  &-image {
+    height: 200px;
+
+    img {
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &-info {
+    padding: 20px 20px 35px;
+
+    &__title {
+      margin-bottom: 16px;
+      white-space: nowrap;
+      overflow: hidden;
+      ms-text-overflow: ellipsis;
+      text-overflow: ellipsis;
+      border-bottom: 1px solid transparent;
+
+      & > a {
+        position: relative;
+
+        &:before {
+          content: '';
+          width: 100%;
+          height: 0;
+          background: $black;
+          bottom: 1px;
+          left: 0;
+          position: absolute;
+          transition: 300ms ease-out;
+        }
+
+
+        &:hover {
+
+          &:before {
+            height: 1px;
+          }
+        }
+      }
+    }
+
+    &__title,
+    &__title  > a {
+      font-weight: 400;
+      font-size: 17px;
+      line-height: 23px;
+      color: $black;
+    }
+
+    &__year {
+      color: $gray;
+      margin-right: 8px;
+      display: inline-block;
+    }
+
+    &__points {
+      font-weight: 300;
+      font-size: 14px;
+      color: $gray;
+      margin-bottom: 26px;
+    }
+
+    &__price {
+      font-weight: 500;
+      font-size: 20px;
+      color: $black;
+    }
+  }
+
+  &--new {
+
+    .card-image {
+      position: relative;
+
+      &:after {
+        content: 'New';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        font-family: $f-secondary;
+        font-weight: 400;
+        font-size: 12px;
+        width: 66px;
+        height: 24px;
+        text-align: center;
+        border-radius: 0 12px 12px 0;
+        background: $black;
+        color: $white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+  }
+
+  &--sold {
+    filter: grayscale(1);
+    -webkit-filter: grayscale(1);
+
+    .card-image {
+      position: relative;
+
+      &:before {
+        content: 'Sold';
+        position: absolute;
+        left: 0;
+        top: 0;
+        font-family: $f-secondary;
+        font-weight: 700;
+        font-size: 50px;
+        color: $white;
+        text-transform: uppercase;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+
+    .card-info {
+      opacity: 0.5;
+    }
+  }
+}
